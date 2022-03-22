@@ -4,8 +4,20 @@
       <a class="navbar-brand">SPORTS STORE</a>
     </div>
   </div>
-  <div class="row text-white">
-    <div class="col-3 bg-info p-2">{{ categories.length }} Categories</div>
-    <div class="col-9 bg-success p-2">{{ products.length }} Products</div>
+  <div class="row">
+    <div class="col-3 bg-info p-2 text-white">
+      {{ categories.length }} Categories
+    </div>
+    <div class="col-9 p-2">
+      <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
+        <h4>
+          {{ product.name }}
+          <span class="badge badge-pill badge-primary float-right">
+            {{ product.price | currency: "USD":"symbol":"2.2-2" }}
+          </span>
+        </h4>
+        <div class="card-text bg-white p-1">{{ product.description }}</div>
+      </div>
+    </div>
   </div>
 </div>
