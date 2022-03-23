@@ -28,8 +28,11 @@ export class StoreComponent {
     this.productsPerPage = newSize;
     this.changePage(1);
   }
-  get pageNumbers(): number[]{
-    return Array(Math.ceil(this.repository.getProducts(this.selectedCategory).length
-      /this.productsPerPage)).fill(0).map((x,i) => i+1);
+  get pageCount(): number {
+    return Math.ceil(this.repository.getProducts(this.selectedCategory).length / this.productsPerPage);
   }
+  // get pageNumbers(): number[]{
+  //   return Array(Math.ceil(this.repository.getProducts(this.selectedCategory).length
+  //     /this.productsPerPage)).fill(0).map((x,i) => i+1);
+  // }
 }
