@@ -10,7 +10,7 @@ Run `ng serve` for a frontend server. Navigate to `http://localhost:4200/`. The 
 
 Run `npm run json` for a json server. Navigate to `http://localhost:3500/products`.
 
-![Screenshot of SportsStore](/pic/2.png)
+![Screenshot of SportsStore](/pic/2.PNG)
  
 ## Code scaffolding
 
